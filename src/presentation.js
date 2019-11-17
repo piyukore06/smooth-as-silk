@@ -1,6 +1,6 @@
 // Import React
 import React from 'react';
-
+import './index.css'
 // Import Spectacle Core tags
 import {
   BlockQuote,
@@ -22,14 +22,14 @@ require('normalize.css');
 
 const theme = createTheme(
   {
-    primary: 'white',
-    secondary: '#1F2022',
-    tertiary: '#03A9FC',
-    quaternary: '#CECECE',
+    primary: '#f5f5f5',
+    secondary: '#705697',
+    tertiary: '#705697AA',
+    quaternary: '#c4b7d7',
   },
   {
-    primary: 'Montserrat',
-    secondary: 'Helvetica',
+    primary: `'castledown'`,
+    secondary: 'Quicksand',
   }
 );
 
@@ -43,10 +43,10 @@ export default class Presentation extends React.Component {
       >
         <Slide transition={['zoom']} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            Smooth as silk
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            A story of animating on the web with perf in mind
           </Text>
         </Slide>
         <Slide transition={['fade']} bgColor="tertiary">
