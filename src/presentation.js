@@ -11,6 +11,7 @@ import {
   Link
 } from 'spectacle';
 
+import Layout from './layout'
 import createTheme from 'spectacle/lib/themes/default';
 import silk from './silk.png'
 import avatar from './img.jpg'
@@ -25,6 +26,9 @@ import html from './html.png'
 import css from './css.png'
 import layout from './layout.mp4'
 import triggers from './csstriggers.png'
+import bounce from './bounce.mp4'
+import composite from './composite.svg'
+import paint from './paint.png'
 
 require('normalize.css');
 
@@ -112,52 +116,42 @@ export default class Presentation extends React.Component {
           </div>
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
-          
+        <Heading size={3} lineHeight={1} textColor="secondary">
+            Render Tree
+          </Heading> <br/>
           <div className="flex">
             <div className="img">
               <img style={{ filter: 'blur(1px)' }} width="90%" src={html} alt=""/>
-              <div className="text">HTML</div>
+              <div className="text">DOM</div>
             </div>
             <div className="img">
               <img style={{ filter: 'blur(1px)' }}  width="90%" src={css} alt=""/>
-              <div className="text">CSS</div>
+              <div className="text">CSSOM</div>
             </div>
           </div>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
-           <Heading size={3} lineHeight={1} textColor="secondary">
-            Layout
-          </Heading>
-          Animation with forming boxes 
+           <Heading size={4} lineHeight={1} textColor="secondary">
+            Layout Calculations
+          </Heading> <br/>
+          <Layout />
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
            <Heading size={3} lineHeight={1} textColor="secondary">
             Paint
           </Heading>
-          Animation with same boxes filling with text and images
+          <br/>
+          <img src={paint} alt=""/>
         </Slide>
 
         <Slide transition={['fade']} bgColor="primary">
            <Heading size={3} lineHeight={1} textColor="secondary">
             Composite
           </Heading>
-          Show the page as image
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-           <Heading size={3} lineHeight={1} textColor="secondary">
-            Every time layout changes
-          </Heading>
-          animating boxes
-        </Slide>
-
-        <Slide transition={['fade']} bgColor="primary">
-           <Heading size={3} lineHeight={1} textColor="secondary">
-            Every time paint changes
-          </Heading>
-          animating boxes
+          <br/>
+          <img src={composite} alt=""/>
         </Slide>
         <Slide transition={['fade']} bgColor="secondary" textColor="quaternary">
            <Heading size={3} lineHeight={1} textColor="quaternary">
@@ -242,6 +236,11 @@ export default class Presentation extends React.Component {
           <Heading size={6} lineHeight={1} textColor="secondary">
             Inspect Animations
           </Heading>
+          <br/>
+          <video className="background-video" loop autoPlay>
+              <source src={bounce} type="video/mp4" />
+              Your browser does not support the video tag.
+          </video>
         </Slide>
         <Slide transition={['fade']} bgColor="primary">
           <Heading size={6} lineHeight={1} textColor="secondary">

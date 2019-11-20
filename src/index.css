@@ -23,6 +23,19 @@
   border: 3px solid #705697;
   width: 400px;
 }
+.rect {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 7s linear forwards;
+  fill: transparent;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+    fill: #C4B7D7;
+  }
+}
 
 .img {
   position: relative;
