@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'Font';
+  src: url("/download.woff") format("woff2");
+}
+
+.underline {
+  border-bottom: 1px solid #c4b7d7;
+}
+
+.flex {
+  display: grid;
+  grid-template-columns: 1fr 1fr;;
+}
+
+.avatar {
+  border-radius: 50%;
+  padding: 15px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-image: url("/img.png");
+  border: 3px solid #705697;
+  width: 400px;
+}
+
+.img {
+  position: relative;
+  width: 90%;
+}
+.text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid white;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.background-video {
+  width: 70%;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  position: relative;
+}
+
+.box {
+  border-radius: 4px;
+  animation: example 300ms linear;
+  border: 2px solid #705697;
+  margin: auto;
+  padding: 20px;
+}
+
+.absolute-box {
+  border-radius: 4px;
+  border: 2px solid #705697;
+  margin: auto;
+  padding: 20px;
+  animation: leftt 3000ms infinite;
+}
+
+.absolute-box-1 {
+  border-radius: 4px;
+  border: 2px solid #705697;
+  margin: auto;
+  padding: 20px;
+  animation: transformm 3000ms infinite;
+}
+
+@keyframes leftt {
+  0% {
+    margin-left: 20%;
+  }
+  50% {
+    margin-left: 60%;
+  }
+  100% {
+    margin-left: 20%;
+  }
+}
+
+@keyframes transformm {
+  0% {
+    transform: translate(0%);
+  }
+  50% {
+    transform: translate(60%);
+  }
+  100% {
+    transform: translate(0%);
+  }
+}
+
+@keyframes example {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

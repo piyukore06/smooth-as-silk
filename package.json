@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-kawaii": "^0.14.4",
     "spectacle-scripts": "2.4.0"
   },
   "scripts": {
